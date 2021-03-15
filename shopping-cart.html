@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/a8a6b3196a.js" crossorigin="anonymous"></script>
+    <style>
+        .fas.fa-heart{
+        color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="name">
+            <a href="index.html">Galaxy Shopping</a>
+        </div>
+        <div class="main">
+            <ul>
+                <li><a href="#">Electroménagers</a></li>
+                <li><a href="#">Vêtements </a></li>
+                <li><a href="#">Meubles</a></li>
+                <li><a href="#">Decorations</a></li>
+            </ul>
+        </div>
+        <div class="shop">
+            <a href="shopping-cart.html"><i class="fas fa-shopping-cart"> My Bag</i></a>
+        </div>
+    </nav>
+    <header>My Shopping Bag</header>
+    <section>
+        <div class="product" id="product1">
+            <figure>
+                <img src="pictures/armoire-mdf.jpg" alt="Armoire">
+            </figure>
+            <div class="details">
+                <h1>Armoire MDF Effet Bois - MDF Stratifié</h1>
+                <ul>
+                    <li>Largeur : 120 cm</li>
+                    <li>Hauteur : 200 cm</li>
+                    <li>Profondeur : 50 cm</li>
+                </ul>
+                <p id="prix1">750 TND</p>
+                <div class="info">
+                    <div>
+                        <p>Quantité :</p>
+                        <button class="minus" onclick="decrement('quantity1', 'prix1', 'sum-product1')" >-</button>
+                        <input type="text" id="quantity1" value="0">
+                        <button class="plus" onclick="increment('quantity1', 'prix1', 'sum-product1')">+</button>
+                    </div>
+                    <div class="c">
+                        <span>Somme De Produit : <span id="sum-product1">0</span> TND</span>
+                    </div>
+                    <div>
+                        <button class="delete" onclick="deleteItem('product1')">Remove</button> 
+                        <i id="whishlist1" onclick="changeColor('whishlist1')" class="far fa-heart fa-2x"></i>
+                    </div>    
+                </div>
+            </div>        
+        </div>
+        <div class="product" id="product2">      
+            <figure>
+                <img src="pictures/blouson.jpg" alt="Blouson">
+            </figure>
+            <div class="details">
+                <h1>Veste en Cachemire</h1>
+                <ul>
+                    <li>Taille : Moyen</li>
+                    <li>Couleur : noir </li>
+                </ul>
+                <p id="prix2">65 TND</p>
+                <div class="info">
+                    <div>
+                        <p>Quantité :</p>
+                        <button class="minus"  onclick="decrement('quantity2', 'prix2', 'sum-product2')">-</button>
+                        <input type="text" id="quantity2" value="0">
+                        <button class="plus" onclick="increment('quantity2', 'prix2', 'sum-product2')">+</button>
+                    </div>
+                    <div class="c">
+                        <span>Somme De Produit : <span id="sum-product2">0</span> TND</span>
+                    </div>
+                    <div>
+                        <button class="delete" onclick="deleteItem('product2')">Remove</button> 
+                        <i id="whishlist2" onclick="changeColor('whishlist2')" class="far fa-heart fa-2x"></i>
+                    </div>    
+                </div>     
+            </div>
+        </div>
+        <div class="product" id="product3">
+            <figure>
+                <img src="pictures/smart-tv-econ.jpg" alt="Smart Tv Econ">
+            </figure>
+            <div class="details">
+                <h1>TÉLÉVISEUR ECON 55" FULL HD SMART ANDROID</h1>
+                <ul>
+                    <li>Résolution : 3840 x 2160 pixels</li>
+                    <li>Système d'exploitation: Android 9</li>
+                    <li>Connectivité: WiFi</li>
+                    <li>Audio: Dolby Digital Plus - Sortie Haut</li>
+                    <li>Connecteur: 2 x HDMI, 2 x USB, 1 x Ethernet RJ 45,<br> 1 x Entrée VGA, 1 x Entrée RCA, 1 x Sortie Audio/Casque</li>
+                </ul>
+                <p id="prix3">1550 TND</p>
+                <div class="info">
+                    <div>
+                        <p>Quantité :</p>
+                        <button class="minus" onclick="decrement('quantity3', 'prix3', 'sum-product3')" 
+                            onclick="total('sum-product3')">-</button>
+                        <input type="text" id="quantity3" value="0">
+                        <button class="plus" onclick="increment('quantity3', 'prix3', 'sum-product3')">+</button>
+                    </div>
+                    <div class="c">
+                        <span>Somme De Produit : <span id="sum-product3">0</span> TND</span>
+                    </div>
+                    <div>
+                      <button class="delete" onclick="deleteItem('product3')">Remove</button> 
+                        <i id="whishlist3" onclick="changeColor('whishlist3')" class="far fa-heart fa-2x"></i>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="total">
+        <p>Votre Somme Total :  </p>
+        <p id="total-price">0</p>
+    </div>
+</body>
+
+</html>

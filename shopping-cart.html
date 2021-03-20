@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    
     <script src="https://kit.fontawesome.com/a8a6b3196a.js" crossorigin="anonymous"></script>
     <style>
         .fas.fa-heart{
@@ -57,7 +57,7 @@
                         <span>Somme De Produit : <span id="sum-product1">0</span> TND</span>
                     </div>
                     <div>
-                        <button class="delete" onclick="deleteItem('product1')">Remove</button> 
+                        <button  id="remove1" class="delete" onclick="deleteItem('product1', 'sum-product1')">Remove</button> 
                         <i id="whishlist1" onclick="changeColor('whishlist1')" class="far fa-heart fa-2x"></i>
                     </div>    
                 </div>
@@ -85,7 +85,7 @@
                         <span>Somme De Produit : <span id="sum-product2">0</span> TND</span>
                     </div>
                     <div>
-                        <button class="delete" onclick="deleteItem('product2')">Remove</button> 
+                        <button class="delete" onclick="deleteItem('product2', 'sum-product2')">Remove</button> 
                         <i id="whishlist2" onclick="changeColor('whishlist2')" class="far fa-heart fa-2x"></i>
                     </div>    
                 </div>     
@@ -117,7 +117,7 @@
                         <span>Somme De Produit : <span id="sum-product3">0</span> TND</span>
                     </div>
                     <div>
-                      <button class="delete" onclick="deleteItem('product3')">Remove</button> 
+                      <button class="delete" onclick="deleteItem('product3', 'sum-product3')">Remove</button> 
                         <i id="whishlist3" onclick="changeColor('whishlist3')" class="far fa-heart fa-2x"></i>
                     </div>    
                 </div>
@@ -128,6 +128,7 @@
         <p>Votre Somme Total :  </p>
         <p id="total-price">0</p>
     </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
